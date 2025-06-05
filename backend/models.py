@@ -1,4 +1,5 @@
 #数据库模型
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -13,6 +14,11 @@ class User(db.Model):
     phone = db.Column(db.String(11), nullable=False)
     email = db.Column(db.String(255))
 
+    def set_password(self, password):
+        self.password = generate_password_hash(password)
+    
+    def check_password(self, password):
+        return check_password_hash(self.password, password)
 
 # 司机表
 class Driver(db.Model):

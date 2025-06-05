@@ -94,3 +94,15 @@ status varchar(10) not null,
 foreign key(driver_id) references DRIVER(driver_id),
 foreign key(passenger_id) references USERS(id)
 );
+
+# dependency
+pip install flask flask_jwt_extended flask_sqlalchemy pymysql
+npm install
+
+# 先启动后端
+cd backend
+python app.py  # 或 flask run
+
+# 后启动前端
+cd frontend
+npm run serve

@@ -14,9 +14,12 @@ def create_app():
 
     # 初始化 JWT
     jwt.init_app(app)
-
-    # 注册蓝图（如有路由模块）
-    # from app.routes.auth import auth_bp
-    # app.register_blueprint(auth_bp)
+    
+    # 注册蓝图
+    from .routes.login import auth_bp
+    from .routes.user import user_bp
+    
+    app.register_blueprint(auth_bp)
+    app.register_blueprint(user_bp)
 
     return app

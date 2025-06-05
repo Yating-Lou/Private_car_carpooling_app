@@ -11,22 +11,22 @@ import axios from 'axios'
 
 export default {
   name: 'TopNav',
-  data() {
+  data () {
     return {
       username: ''
     }
   },
-  mounted() {
+  mounted () {
     this.fetchUsername()
   },
   methods: {
-    goBack() {
+    goBack () {
       this.$router.go(-1)
     },
-    goHome() {
-      this.$router.push('/home')  // 根据你的路由修改为主页面路径
+    goHome () {
+      this.$router.push('/home') // 根据你的路由修改为主页面路径
     },
-    async fetchUsername() {
+    async fetchUsername () {
       try {
         const token = localStorage.getItem('access_token')
         const response = await axios.get('/user/info', {

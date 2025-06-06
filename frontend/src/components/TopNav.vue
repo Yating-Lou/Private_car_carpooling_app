@@ -1,32 +1,32 @@
 <template>
-  <div class="top-nav">
-    <button @click="goBack">返回</button>
-    <span class="username">欢迎，{{ username }}</span>
-    <button @click="goHome">首页</button>
-  </div>
+  <div></div>
 </template>
 
 <script>
 import axios from 'axios'
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 
 export default {
   name: 'TopNav',
-  data() {
+  setup () {
+    const store = useStore()
+    const username = computed(() => store.state.user?.name || '未登录')
     return {
-      username: ''
+      username
     }
   },
-  mounted() {
+  mounted () {
     this.fetchUsername()
   },
   methods: {
-    goBack() {
+    goBack () {
       this.$router.go(-1)
     },
-    goHome() {
-      this.$router.push('/home')  // 根据你的路由修改为主页面路径
+    goHome () {
+      this.$router.push('/home')
     },
-    async fetchUsername() {
+    async fetchUsername () {
       try {
         const token = localStorage.getItem('access_token')
         const response = await axios.get('/user/info', {

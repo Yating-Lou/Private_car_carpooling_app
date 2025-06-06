@@ -25,43 +25,44 @@
 Private_car_carpooling_app/
 │
 ├── backend/
-│   ├── app.py                  # 主应用入口
-│   ├── models.py               # ORM模型
-│   ├── app/                        #app模块
-│   │   ├──  __init__.py          #创建 app + 注册扩展
-│   │   ├── routes/                #路由模块
-│   │   │   ├── login.py             # 登录注册接口
-│   │   │   ├── user.py             # 用户信息、司机认证
-│   │   │   ├── trip.py              # 行程发布/查询/详情
-│   │   │   └──order.py             # 订单相关
-│   └── config.py                   #配置类
+│   ├── app.py                   # 主应用入口
+│   ├── models.py                # ORM模型
+│   ├── app/                     # app模块
+│   │   ├──  __init__.py         # 创建 app + 注册扩展
+│   │   ├── routes/              # 路由模块
+│   │   │   ├── login.py         # 登录注册接口
+│   │   │   ├── user.py          # 用户信息、司机认证
+│   │   │   ├── trip.py          # 行程发布/查询/详情
+│   │   │   └──order.py          # 订单相关
+│   └── config.py                # 配置类
 ├── frontend/
-│   ├── node_modules/             # 第三方包存储目录
-│   ├── public/           #任何放置在 public 文件夹的静态资源都会被简单的复制，而不经过 webpack
-│   │   ├── favicon.ico           浏览器收藏夹图标
-│   │   └──index.html            单页面 HTML 文件
+│   ├── node_modules/            # 第三方包存储目录
+│   ├── public/                  # 任何放置在 public 文件夹的静态资源都会被简单的复制，而不经过 webpack
+│   │   ├── favicon.ico          # 浏览器收藏夹图标
+│   │   └──index.html            # 单页面 HTML 文件
 │   ├── src/
-│   │   ├── assets/                #公共资源目录，放图片等资源
-│   │   ├── components/            #公共组件目录
-│   │   │   └── TopNav.vue                  # 顶部导航栏，显示用户名，有“返回”“首页”两个按钮
-│   │   ├── router/              #路由模块
-│   │   │   └── index.js                  # Vue Router 配置
-│   │   ├── store/                # Vue 容器模块
+│   │   ├── assets/              # 公共资源目录，放图片等资源
+│   │   ├── components/          # 公共组件目录
+│   │   │   └── TopNav.vue       # 顶部导航栏，显示用户名，有“返回”“首页”两个按钮
+│   │   ├── router/              # 路由模块
+│   │   │   └── index.js         # Vue Router 配置
+│   │   ├── store/               # Vue 容器模块
 │   │   ├── api/
-│   │   │   └── index.js                  # axios 实例配置，统一设置 baseURL
-│   │   ├── views/                #视图组件存储目录，所有的路由页面都存储到这里
-│   │   │   ├── Login.vue                  #登录界面
-│   │   │   ├── Register.vue             #注册界面
-│   │   │   ├── Home.vue                 #主界面
-│   │   │   ├── TripForm.vue              # 发布共享行程界面表单
-│   │   │   ├── TripList.vue              # 行程列表
-│   │   │   ├── TripDetail.vue            # 行程详情页
-│   │   │   ├── OrderList.vue             # 订单列表
-│   │   │   ├── PersonalInfo.vue          # 个人信息页
-│   │   │   └── DriverAuth.vue            # 司机认证页
-│   │   ├──App.vue               #根组件，最终被替换渲染到 index.html 页面中 #app 入口节点
-│   │   └──main.js               #整个项目的启动入口模块
-│   ├── ……
+│   │   │   └── index.js         # axios 实例配置，统一设置 baseURL
+│   │   ├── views/               # 视图组件存储目录，所有的路由页面都存储到这里
+│   │   │   ├── Login.vue        # 登录界面
+│   │   │   ├── Register.vue     # 注册界面
+│   │   │   ├── Home.vue         # 主界面
+│   │   │   ├── TripForm.vue     # 发布共享行程界面表单
+│   │   │   ├── TripList.vue     # 行程列表
+│   │   │   ├── TripDetail.vue   # 行程详情页
+│   │   │   ├── OrderList.vue    # 订单列表
+│   │   │   ├── PersonalInfo.vue # 个人信息页
+│   │   │   └── DriverAuth.vue   # 司机认证页
+│   │   ├──App.vue               # 根组件，最终被替换渲染到 index.html 页面中 #app 入口节点
+│   │   └──main.js               # 整个项目的启动入口模块
+│   ├── jsconfig.json
+|   ├── ...
 
 
 

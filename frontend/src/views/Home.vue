@@ -70,7 +70,7 @@ const endLocation = ref('')
 
 onMounted(() => {
   setTimeout(() => {
-    isDriver.value = false
+    isDriver.value = true
   }, 500)
 })
 
@@ -87,7 +87,7 @@ const shareTrip = () => {
     ElMessage.error('请先完成司机认证')
     return
   }
-  router.push('/trip/form')
+  router.push('/tripform')
 }
 
 const viewTrips = () => {
@@ -147,7 +147,7 @@ export default {
 .driver-tip {
   font-size: 12px;
   margin-left: 10px;
-  color: #white;
+  color: white;
 }
 
 .banner-image-wrapper {

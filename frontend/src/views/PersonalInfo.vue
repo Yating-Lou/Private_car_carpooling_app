@@ -15,7 +15,7 @@ const props = defineProps({
   },
   isDriver: {
     type: Boolean,
-    default: false
+    default: true
   }
 })
 

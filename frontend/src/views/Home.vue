@@ -95,7 +95,7 @@ const viewTrips = () => {
 }
 
 const viewOrders = () => {
-  router.push('/order/list')
+  router.push('/orderlist')
 }
 </script>
 
